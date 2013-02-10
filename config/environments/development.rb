@@ -36,5 +36,5 @@ Sharedrop1::Application.configure do
   config.assets.debug = true
 
   # for devise
-  config.action_mailer.default_url_options = { :host => 'tinkers.dip.jp' }
+  config.action_mailer.default_url_options = { :host => 'tinkers.dip.jp/iwillfindit/' }
 end
