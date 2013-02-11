@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130207160641) do
+ActiveRecord::Schema.define(:version => 20130211143710) do
 
   create_table "badges", :force => true do |t|
     t.string   "code",       :limit => 50
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20130207160641) do
     t.datetime "updated_at",               :null => false
     t.integer  "created_by"
     t.integer  "updated_by"
+    t.text     "note"
   end
 
   create_table "users", :force => true do |t|

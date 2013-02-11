@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Badge</th>
+      <th>Note</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -18,6 +19,9 @@
         <%= link_to badge.code, badge_path(badge) %>
         </p>
         </div>
+        </td>
+        <td>
+          <%= badge.note %>
         </td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
