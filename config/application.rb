@@ -58,5 +58,15 @@ module Sharedrop1
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    #settings for devise
+    config.to_prepare do
+      Devise::SessionsController.layout "single_column"
+      Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "application"   : "single_column" }
+      Devise::ConfirmationsController.layout "single_column"
+      Devise::UnlocksController.layout "single_column"
+      Devise::PasswordsController.layout "single_column"
+    end
+    
   end
 end

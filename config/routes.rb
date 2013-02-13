@@ -5,6 +5,7 @@ Sharedrop1::Application.routes.draw do
 
 
   get "home/index"
+  #get "user/sign_in"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -57,7 +58,8 @@ Sharedrop1::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
   #root :to => 'badges#index'
-  root :to => 'home#index'
+  #root :to => 'home#index'
+  root :to => 'badges#index'
 
   # See how all your routes lay out with "rake routes"
 

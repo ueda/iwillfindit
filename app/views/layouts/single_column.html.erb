@@ -35,58 +35,26 @@
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
   </head>
   <body>
-
-    <div class="navbar navbar-fluid-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <%= link_to "Findyr", home_index_path, :class=>"brand" %>
-          <div class="container-fluid nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
+    <div class="container">
+      <div class="header">
       </div>
-    </div>
-
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Menu</li>
-              <li><%= link_to "Badges", badges_path  %></li>
-              <% if user_signed_in? %>
-              <li><%= link_to "Sign out", destroy_user_session_path, method: :delete  %></li>
-              <% else %>
-              <li><%= link_to "Sign in", new_user_session_path %></li>
-              <% end %>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-        <div class="span9">
+      <div class="row">
+        <div class="span3"> </div>
+        <div class="span6">
+          <h1>Findyr</h1>
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
-      </div><!--/row-->
-
+        <div class="span3">
+        </div>
+      </div>
       <footer>
-        <p>&copy; Company 2013</p>
+        <p>&copy; Hirofumi Yamakami & TOS 2013</p>
       </footer>
-
-    </div> <!-- /container -->
-
+    </div>
     <!-- Javascripts
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <%= javascript_include_tag "application" %>
-
   </body>
 </html>
